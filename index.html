@@ -9,34 +9,49 @@
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/projPage.css">
+    <script src="js/backtotop/modernizr.js"></script>
   </head>
   <body>
+
     <section class="page-header">
       <h1 class="project-name">Team Empire</br>3d-laser-engraved-crystal-simulator</h1>
-      <h2 class="project-tagline">This is a project tries to simulate the 3D laser engraved crystal by using WebGL and ray-tracing method.</h2>
-      <a href="https://github.com/Hedwig188/3d-laser-engraved-crystal-simulator" class="btn">View on GitHub</a>
+<!--       <h2 class="project-tagline">This is a project tries to simulate the 3D laser engraved crystal by using WebGL and ray-tracing method.</h2>
+ -->      <!-- <a href="https://github.com/Hedwig188/3d-laser-engraved-crystal-simulator" class="btn">View on GitHub</a>
       <a href="https://github.com/Hedwig188/3d-laser-engraved-crystal-simulator/zipball/master" class="btn">Download .zip</a>
-      <a href="https://github.com/Hedwig188/3d-laser-engraved-crystal-simulator/tarball/master" class="btn">Download .tar.gz</a>
+      <a href="https://github.com/Hedwig188/3d-laser-engraved-crystal-simulator/tarball/master" class="btn">Download .tar.gz</a> -->
+      <div class="menu_bar">
+        <div class="menu_item" id="abstract"><a href="#abstract_title">Abstract</a></div>
+        <div class="menu_item" id="background"><a href="#motivation_title">Background</a></div>
+        <div class="menu_item" id="implementation"><a href="#algorithm_title">Implementation</a></div>
+        <div class="menu_item" id="result"><a href="#result_title">Result</a></div>
+        <div class="menu_item" id="team"><a href="#contact_title">Team</a></div>
+      </div>
     </section>
-
     <section class="main-content">
       <h3>
 <a id="abstract_title" class="anchor" href="#abstract_title" aria-hidden="true"><span class="octicon octicon-link"></span></a>Abstract</h3>
-<img id="finalResultImg" src="img/expected.png" alt="expected result"></img>
+<img id="finalResultImg" src="img/expected.png" alt="expected result"></img></br>
+<a id="demo_url" style="cursor:pointer">URL</a>
 <p>Laser Etch is a popular and quick technology now. It is used in creating customized beautiful gifts. Therefore, a perfect simulation can not only give the customers a basic idea about how the final product will look like, but also promote the buying willingness of customers. 
 Our project focuses on creating a useful tool to perfectly simulate a 3D Laser Etch product. This tool will allow users to upload their desired 3D model and get its crystal laser etch simulation. In this project, we can learn how to transfer a triangle mesh 3D model into a point cloud and the ray-tracing caculation within a crystal material with an object inside.
 </p>
 
 
 <h3>
-<a id="motivation_title" class="anchor" href="#motivation_title" aria-hidden="true"><span class="octicon octicon-link"></span></a>Motivation and Introduction</h3>
+<a id="motivation_title" class="anchor" href="#motivation_title" aria-hidden="true"><span class="octicon octicon-link"></span></a>Background and Introduction</h3>
 
 <p>In computer graphics, ray tracing is a technique for generating an image by tracing the path of light through pixels in an image plane and simulating the effects of its encounters with virtual objects. The technique is capable of producing a very high degree of visual realism, usually higher than that of typical scanline rendering methods, but at a greater computational cost. This makes ray tracing best suited for applications where the image can be rendered slowly ahead of time, such as in still images and film and television visual effects, and more poorly suited for real-time applications like video games where speed is critical. Ray tracing is capable of simulating a wide variety of optical effects, such as reflection and refraction, scattering, and dispersion phenomena (such as chromatic aberration)</p>
 <img id="rtMethodImg" alt="ray_tracing_method_img" src="img/Ray_trace_diagram.svg.png"></img>
 
 <h3>
 <a id="algorithm_title" class="anchor" href="#algorithm_title" aria-hidden="true"><span class="octicon octicon-link"></span></a>Algorithm and Method</h3>
-
+<p>1. implement basic ray tracing</p>
+<img id="basic_rt_img" src="img/basic_ray_tracing.png" alt="basic ray tracing"></img>
+<img id="basic_rt_algorithm" src="img/basic_rt_algorithm.png" alt="basic ray tracing algorithm"></img>
+<p>2. simulate point cloud in matlab</p>
+<img id="sim_point_cloud_img" src="img/matlab_simulation.png" alt="point cloud matlab simulation"></img>
+<p>3. transform object to point cloud</p>
+<video controls="controls" width="800" height="600" name="Video Name" src="img/milestone3.mov"></video>
 <p>First, the triangle mesh 3D model will be decomposed into very fine geometry and be regarded as a point cloud. We will refer to inflating balloon model algorithm in this part [f]. Second, this point cloud will be enclosed in a cube or any polyhedral created by WebGL library,which will become the crystal part. Third, the ray-tracing will be involved to render the whole object. In our project, we want to present a realistic rendering for our models, which combines the shading properties of reflection and refraction in the real world. Therefore, we will first calculate the shading coefficients of all the objects in the scene. Then, we cast rays through each pixel and test the intersection with some subset of all the objects in the scene. Once the ray hits the nearest object, we examine the material property of the object to decide whether to perform further shading algorithm. Reflection and refraction algorithm will be exploited if necessary. In the end, the control panel, animation, and ambient light may be included.
 </p>
 
@@ -49,19 +64,17 @@ Our project focuses on creating a useful tool to perfectly simulate a 3D Laser E
 <a id="contact_title" class="anchor" href="#contact_title" aria-hidden="true"><span class="octicon octicon-link"></span></a>Contact</h3>
 
 <p>Team</p>
-<p>Chieh Chen&nbsp;&nbsp;<a>chiehich@usc.edu</a></p>
-<p>Yudong Yang&nbsp;&nbsp;<a>yudongya@usc.edu</a></p>
-<p>Chong Li&nbsp;&nbsp;<a>chongli@usc.edu</a></p>
-<p>Yawei Huang&nbsp;&nbsp;<a>yaweihua@usc.edu</a></p>
+<p>Chieh-I Chen&nbsp;&nbsp;(<a>chiehich@usc.edu</a>)</p>
+<p>Yudong Yang&nbsp;&nbsp;(<a>yudongya@usc.edu</a>)</p>
+<p>Chong Li&nbsp;&nbsp;(<a>chongli@usc.edu</a>)</p>
+<p>Yawei Huang&nbsp;&nbsp;(<a>yaweihua@usc.edu</a>)</p>
 
-      <footer class="site-footer">
-        <span class="site-footer-owner"><a href="https://github.com/Hedwig188/3d-laser-engraved-crystal-simulator">3d-laser-engraved-crystal-simulator</a> is maintained by <a href="https://github.com/Hedwig188">Hedwig188</a>.</span>
-
-        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
-      </footer>
+      
 
     </section>
-
+  <a href="#0" class="cd-top">Top</a>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="js/backtotop/main.js"></script> <!-- Gem jQuery -->
             <script type="text/javascript">
             var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
             document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
