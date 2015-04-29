@@ -1,7 +1,8 @@
-#finalResultImg,#rtMethodImg{
-	width:600px;
+#finalResultImg{
+	width:640px;
 	height:450px;
 }
+
 #finalResultImg2{
   height: 450px;
 }
@@ -75,7 +76,7 @@ a {
   height:450px;
 }
 
-#point_cloud_method1,#point_cloud_method2{
+#point_cloud_method1,#point_cloud_method2,#rtMethodImg{
   width: 600px;
   height: 450px;
 }
