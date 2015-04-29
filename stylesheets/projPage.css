@@ -1,6 +1,9 @@
 #finalResultImg,#rtMethodImg{
 	width:600px;
-	height:400px;
+	height:450px;
+}
+#finalResultImg2{
+  height: 450px;
 }
 
 .menu_bar{
@@ -69,5 +72,10 @@ a {
 
 #basic_rt_img,#basic_rt_algorithm,#sim_point_cloud_img,#point_cloud_img,#basic_rt_opengl{
   width:600px;
-  height:400px;
+  height:450px;
+}
+
+#point_cloud_method1,#point_cloud_method2{
+  width: 600px;
+  height: 450px;
 }
