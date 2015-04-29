@@ -49,13 +49,13 @@ Our project focuses on creating a useful tool to perfectly simulate a 3D Laser E
 <a id="algorithm_title" class="anchor" href="#algorithm_title" aria-hidden="true"><span class="octicon octicon-link"></span></a>Algorithm and Method</h3>
 <p>First, the triangle mesh 3D model will be decomposed into very fine geometry and be regarded as a point cloud. We will refer to inflating balloon model algorithm in this part. Second, this point cloud will be enclosed in a cube or any polyhedral created by WebGL library,which will become the crystal part. Third, the ray-tracing will be involved to render the whole object. In our project, we want to present a realistic rendering for our models, which combines the shading properties of reflection and refraction in the real world. Therefore, we will first calculate the shading coefficients of all the objects in the scene. Then, we cast rays through each pixel and test the intersection with some subset of all the objects in the scene. Once the ray hits the nearest object, we examine the material property of the object to decide whether to perform further shading algorithm. Reflection and refraction algorithm will be exploited if necessary. In the end, the control panel, animation, and ambient light may be included.
 </p>
-<p>1. Implement basic ray tracing using c++</p>
+<p>1. Implement basic ray tracing by using c++</p>
 <img id="basic_rt_opengl" src="img/ray_tracing_opengl.png" alt="basic ray tracing opengl"></img>
 <p>2. simulate point cloud in matlab</p>
 <img id="sim_point_cloud_img" src="img/matlab_simulation.png" alt="point cloud matlab simulation"></img>
 <img id="point_cloud_method1" src="img/point_cloud_method1.png" alt="point_cloud_method1.png"></img>
 <img id="point_cloud_method2" src="img/point_cloud_method2.png" alt="point_cloud_method2.png"></img>
-<p>3. Implement ray tracing load object using webgl</p>
+<p>3. Implement ray tracing by using webgl</p>
 <img id="basic_rt_img" src="img/basic_ray_tracing.png" alt="basic ray tracing"></img>
 <p>4. transform object to point cloud</p>
 <img id="point_cloud_img" src="img/point_cloud.png" alt="point cloud"></img>
